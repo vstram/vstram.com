@@ -32,12 +32,12 @@ Descrição do Processo
 Considerações 
 =============
 
-1. Processo idealizado sem operadores. Uma vez que a matéria-prima se aproxima da máquina, esta é carregada instantaneamente para processamento. Da mesma forma, assim que a matéria-prima é transformada em produto acabado, este é transportado imediatamente para o estoque. Não há atrasos na carga/descarga de peças na máquina;
+1. Processo idealizado sem operadores. Uma vez que a matéria prima se aproxima da máquina, esta é carregada instantaneamente para processamento. Da mesma forma, assim que a matéria prima é transformada em produto acabado, este é transportado imediatamente para o estoque. Não há atrasos na carga/descarga de peças na máquina;
 2. Não há variações de desempenho de produção da máquina (por desgaste das ferramentas ou peças). A máquina não necessita de reparos ou ajustes durante toda a produção. A energia fornecida pela rede elétrica se mantém estável e capaz de atender ao funcionamento da máquina;
-3. A qualidade da materia-prima e do produto acabado após ser processado pela máquina são sempre considerados ideais. Não há refugos;
-4. Não há variações na capacidade de fornecimento de matéria-prima.
+3. A qualidade da matéria prima e do produto acabado após ser processado pela máquina são sempre considerados ideais. Não há refugos;
+4. Não há variações na capacidade de fornecimento de matéria prima.
 5. Não há restrições de transporte, tanto da matéria prima para a máquina, como de produtos acabados depois da produção da máquina;
-6. Dimensões e pesos, tanto da materia-prima como do produto acabado, não estão sendo considerados;
+6. Dimensões e pesos, tanto da matéria prima como do produto acabado, não estão sendo considerados;
 
 ======================
 Parâmetros do Processo 
@@ -45,7 +45,7 @@ Parâmetros do Processo
 
 1. O taxa de fornecimento de materia prima é de um item por minuto;
 2. A capacidade de acúmulo de peças de matéria prima próxima à máquina é de 50 itens;
-3. A máquina é capaz de transformar a matéria-prima em produto acabado em um tempo constante de 60 segundos
+3. A máquina é capaz de transformar a matéria prima em produto acabado em um tempo constante de 60 segundos
 4. A capacidade da máquina é de uma peça por vez.
 
 ============

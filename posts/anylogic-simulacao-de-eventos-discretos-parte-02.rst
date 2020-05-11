@@ -5,7 +5,7 @@
 .. categories: pt-BR DES
 .. has_math: true
 
-Eu havia comentado no artigo anterior - Anylogic Simulação de Eventos Discretos - Parte 01 - sobre uma forma de mensurar a performance do processo modelado no Anylogic 8.5.2. Neste artigo, irei mostrar como isso pode ser feito.
+Eu havia comentado no artigo anterior - Anylogic **Simulação de Eventos Discretos** - Parte 01 - sobre uma forma de mensurar a performance do processo modelado no Anylogic 8.5.2. Neste artigo, irei mostrar como isso pode ser feito.
 
 .. TEASER_END
 
@@ -46,8 +46,8 @@ Parâmetros do Processo
 Procedimento 
 ============
 
-1. É mais fácil começar de um 'V0', isto é, de um ponto de partida conhecido e que sabemos que está funcionando. Este processo é idêntico ao processo descrito no artigo anterior. Assim, iremos usar o processo modelado anteriormente como ponto de partida. Abra o projeto ``des01`` no Anylogic. Crie um novo modelo no Anylogic. Atribua um nome, tal como: ``des02``
-2. Em sua área de trabalho deverão aparecer duas abas ``Main``: uma em branco (referente ao ``des02``) e outra com o processo modelado anteriormante (referente ao ``des01``). Clique e arraste um retângulo de seleção, envolvendo todos os blocos e ligações de ``des01``. Copie (Crtl+c) e cole (Ctrl+v) no Main de ``des02``
+1. É mais fácil começar de um 'V0', isto é, de um ponto de partida conhecido e que sabemos que está funcionando. Este processo é idêntico ao processo descrito no artigo anterior. Assim, iremos usar o processo modelado anteriormente como ponto de partida. Abra o projeto ``des01`` no Anylogic. Crie um novo modelo. Atribua um nome, tal como: ``des02``
+2. Em sua área de trabalho deverão aparecer duas abas ``Main``: uma em branco (referente ao ``des02``) e outra com o processo modelado anteriormante (referente ao ``des01``). Clique e arraste um retângulo de seleção, envolvendo todos os blocos e ligações de ``des01``. Copie (Ctrl+c) e cole (Ctrl+v) no Main de ``des02``
 3. Na paleta ``Process Modeling Library``, localize o bloco ``Time Measure Start``. Com o ``Main`` referente ao ``des02`` aberto, arraste este bloco para a interligação entre os blocos ``source`` e ``queue``. Garanta que as ligações seja refeitas (acontece automaticamente se voce posicionar novo bloco corretamente)
 4. Faça o mesmo com o bloco ``Time Measure End``, mas desta vez o posicione entre os blocos ``delay`` e ``sink``.
 5. Posicione os blocos na área de trabalho de tal forma que eles estejam um pouco mais distantes entre si, conforme figura abaixo.
@@ -80,8 +80,8 @@ Procedimento
 
     Configuração do gráfico
 
-15. Finalmente, vamos definir o tempo máximo de simulação para nosso processo. Em ``Projects``, selecione o item ``Simulation:Main``. No grupo ``Model Time``, defina ``Stop at specified time`` no campo ``Stop:``. Em ``Stop Time:``, defina o valor 480.  
-16. Pronto. O modelo está pronto para ser simulado. Tecle ``F5`` e depois clique em ``Run``.
+15. Finalmente, vamos definir o tempo máximo de simulação para nosso processo. Em ``Projects``, selecione o item ``Simulation:Main``. No grupo ``Model Time``, defina ``Stop at specified time`` no campo ``Stop:``. Em ``Stop Time:``, defina o valor 480 minutos.  
+16. Pronto! O modelo está pronto para ser simulado. Tecle ``F5`` e depois clique em ``Run``.
 17. [Opcional] Pode ser interessante ver graficamente a utilização da fila (número visível no bloco queue). Crie um novo bloco ``Dataset`` e defina o campo ``Vertical axis value`` como:
 
 .. code-block:: java
@@ -117,13 +117,13 @@ No caso modelado neste processo, foi atribuída a distribuição de probabilidad
 
 Observa-se no vídeo que na maior parte do tempo há a formação de uma fila de peças (a curva cinza esta sempre um pouco acima da curva verde), devido à disponibilidade de peças a um ritmo maior que ``1`` peça por minuto.
 
-Eventualmente (próximo ao minuto ``150``), o fornecimento de materia prima não consegue suprir a capacidade de produção (``queue = 0``) e a curva verde muda sutilmente sua inclinação para em seguida, rapidamente, obter novamente certa folga no envio de matéria prima. No pior momento, a fila fica em torno de ``24`` peças, atrasando bastante o tempo medido das peças seguintes que entram no processo. Como resultado, obtemos um tempo médio final de ``7.71`` minutos. 
+Eventualmente (próximo ao minuto ``150``), o fornecimento de materia prima não consegue suprir a capacidade de produção e a curva verde muda sutilmente sua inclinação para em seguida, rapidamente, obter novamente certa folga no envio de matéria prima. No pior momento, a fila fica em torno de ``24`` peças, atrasando bastante o tempo medido das peças seguintes que entram no processo. Como resultado, obtemos um tempo médio final de ``7.71`` minutos. 
 
 A máquina não consegue compensar eventuais matérias primas disponíveis antes do tempo de ``1`` minuto, o que acaba por acumular para as peças seguintes. O atraso no tempo total se refere, portanto, aos pequenos atrasos que vão se acumulando ao longo do tempo.
 
-A lição que fica é que se deve conhecer o comportamento (digo, distribuição de probabilidade) de cada etapa do processo e, caso tenha processos de "cauda longa" (isto é, que consomem muito tempo, mas em poucas ocorrências), ser capaz de ter na sequência do processo etapas que consigam compensar atrasos sem prejudicar muito o tempo total de produção. Há um elevado risco de acúmulo de peças em processamento na linha caso não seja possível compensar eventuais atrasos de etapas anteriores.
+A lição que fica é que se deve conhecer o comportamento (digo, distribuição de probabilidade) de cada etapa do processo e, caso tenha processos de "cauda longa" (isto é, que consomem muito tempo, mas em poucas ocorrências), ser capaz de ter na sequência do processo etapas que consigam compensar atrasos sem prejudicar muito o tempo total de produção. Há um elevado risco de acúmulo de peças em processamento na linha de produção caso não seja possível compensar eventuais atrasos de etapas anteriores.
 
-Se o fornecimento de matéria prima fosse perfeito, isto é, no mesmo ritmo da produção da máquina ``constante = 1 peça por minuto`` teria-se uma produção de 480 peças. No vídeo constatamos que foram produzidas 462 pelas. Há um indicador de eficiência denominado OEE (Eficiência Global dos Equipamentos), utilizado para "qualificar e indicar a maneira como a operação de fabricação é realizada e auxilia na melhoria dos processos de manutenção e produção da empresa". É definido como:
+Se o fornecimento de matéria prima fosse perfeito, isto é, no mesmo ritmo da produção da máquina ``constante = 1 peça por minuto`` teria-se uma produção de 480 peças. No vídeo constatamos que foram produzidas 462 pelas. Há um indicador de eficiência denominado **OEE - Overall Equipment Effectiveness** (Eficiência Global dos Equipamentos), utilizado para "qualificar e indicar a maneira como a operação de fabricação é realizada e auxilia na melhoria dos processos de manutenção e produção da empresa". É definido como:
 
 .. math::
 
@@ -159,7 +159,7 @@ Recursos
 ========
 1. Para modelar o processo de manufatura - https://www.anylogic.com/
 2. Para editar as figuras - https://www.gimp.org/
-3. Royality free images - https://pt.freeimages.com
+3. Royalty free images - https://pt.freeimages.com
 4. Para capturar o video da simulação do processo - https://screencast-o-matic.com/
 5. AnyLogic in Three Days: Modeling and Simulation Textbook - Ilya Grigoryev - https://www.anylogic.com/resources/books/free-simulation-book-and-modeling-tutorials/
 6. Para editar equações LaTex online - https://www.codecogs.com/latex/eqneditor.php

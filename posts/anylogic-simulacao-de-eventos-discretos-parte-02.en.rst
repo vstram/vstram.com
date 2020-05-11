@@ -1,4 +1,4 @@
-.. title: Anylogic Simulação de Eventos Discretos - Parte 02
+.. title: Anylogic Discrete Event Simulation - Part 02
 .. slug: anylogic-discrete-event-simulation-part-02
 .. author: vstram
 .. date: 2020-05-06 17:16:47 UTC-03:00
@@ -158,4 +158,4 @@ Resources
 4. Video capture - https://screencast-o-matic.com/
 5. AnyLogic in Three Days: Modeling and Simulation Textbook - Ilya Grigoryev - https://www.anylogic.com/resources/books/free-simulation-book-and-modeling-tutorials/
 6. To edit LaTex equations online - https://www.codecogs.com/latex/eqneditor.php
-7. To download the Anylogic modeled process - `Clique Here </anylogic/DES02/DES02.alp>`_
+7. To download the Anylogic modeled process - `Click Here </anylogic/DES02/DES02.alp>`_

@@ -1,10 +1,10 @@
-.. title: Anylogic Discrete Event Simulation - Part 01
+.. title: Anylogic Discrete Event Simulation - Simple Example - Part 01
 .. slug: anylogic_discrete_event_simulation_01
 .. author: vstram
 .. date: 2020/04/30
-.. categories: en DES
+.. tags: en, Discrete Event Simulation
 
-Modeling of a simplified manufacturing process, composed by just a single step, using the Anylogic 8.5.2 software and the **Discrete Event Simulation** approach (DES - Discrete Event Simulation). The process consists of one machine, processing a stream of raw materials that can be accumulated in a queue of limited capacity.
+Modeling of a simplified manufacturing process, composed by just a single step, using the Anylogic 8.5.2 software and the **Discrete Event Simulation** approach (DES). The process consists of one machine, processing a stream of raw materials that can be accumulated in a queue of limited capacity.
 
 .. TEASER_END
 
@@ -55,7 +55,7 @@ Procedure
 1. Create a new model in Anylogic. Assign a name, such as: ``des01``;
 2. Change the time unit from seconds to minutes. Click on ``Finish``;
 3. We use the blocks available in the ``Process Modeling Library`` palette to model this process. Start by dragging a ``source`` block to the desktop;
-4. Set the source block's ``Arrival Rate`` property to 1 item per minute;
+4. Set the source block's ``Arrival Rate`` property to ``1`` item per ``minute``;
 5. Drag a ``queue`` block next to the ``source`` tile. Note that they are automatically connected. Set the ``Capacity`` property to ``50``;
 6. Drag a ``delay`` block next to the ``queue`` block. The ``delay`` block will model the machine responsible for processing the raw material into a final product. Set the ``Delay Time`` property to ``1 minute``;
 7. Drag a ``sink`` block next to the ``delay`` block. The ``sink`` block is used to indicate the end of the process;

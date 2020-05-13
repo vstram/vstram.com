@@ -1,8 +1,8 @@
-.. title: Anylogic Discrete Event Simulation - Part 02
+.. title: Anylogic Discrete Event Simulation - How to Measure the Process - Part 02
 .. slug: anylogic-discrete-event-simulation-part-02
 .. author: vstram
 .. date: 2020-05-06 17:16:47 UTC-03:00
-.. categories: en DES
+.. tags: en, Discrete Event Simulation
 
 I had commented in the previous article - **Anylogic Simulation of Discrete Events** - Part 01 - about a way to measure the performance of the process modeled in Anylogic 8.5.2. In this article, I will show you how this can be done.
 
@@ -112,13 +112,13 @@ Although simple, the process modeled in this simulation allows us to observe ver
 
 It is observed in the video that most of the time there is the formation of a queue of parts (the gray curve is always just above the green curve), due to the availability of parts at a pace greater than ``1`` parts by minute.  
 
-Eventually (close to the minute ``150``), the supply of raw material cannot supply the production capacity and the green curve subtly changes its inclination to then, very quickly, get certain again slack in sending raw material. At the worst moment, the queue is around ``24`` parts, greatly delaying the measured time of the following parts entering the process. As a result, we get a final average time of ``7.71`` minutes.
+Eventually (close to the minute ``150``), the availability of raw material cannot supply the production capacity and the green curve subtly changes its inclination to then, very quickly, get certain again slack in sending raw material. At the worst moment, the queue is around ``24`` parts, greatly delaying the measured time of the following parts entering the process. As a result, we get a final average time of ``7.71`` minutes.
 
 The machine cannot compensate any available raw materials before the time of ``1`` minute, which ends up accumulating for the following parts. The delay in total time, therefore, refers to the small delays that accumulate over time.
 
 The lesson that remains is that one must know the behavior (I mean, probability distribution) of each step of the process and, if it has "long tail" processes (that is, that consume a lot of time, but in a few occurrences), be able to have steps that can compensate delays in the process without significantly affecting the total production time. There is a high risk of accumulation of parts in process in the production line if it's not possible to compensate for any delays from previous stages.
 
-If the supply of raw materials were perfect, that is, at the same pace as the production of the machine ``constant = 1 piece per minute``, there would be a production of 480 pieces. In the video we see that 462 were produced by. There is an efficiency indicator called **OEE - Overall Equipment Effectiveness**, used to "qualify and indicate the way the manufacturing operation is carried out and helps to improve the company's maintenance and production processes". It is defined as:
+If the supply of raw materials were perfect, that is, at the same pace as the production of the machine ``constant = 1 part per minute``, there would be a production of 480 parts. In the video we see that 462 were produced by. There is an efficiency indicator called **OEE - Overall Equipment Effectiveness**, used to "qualify and indicate the way the manufacturing operation is carried out and helps to improve the company's maintenance and production processes". It is defined as:
 
 .. math::
 
@@ -159,3 +159,4 @@ Resources
 5. AnyLogic in Three Days: Modeling and Simulation Textbook - Ilya Grigoryev - https://www.anylogic.com/resources/books/free-simulation-book-and-modeling-tutorials/
 6. To edit LaTex equations online - https://www.codecogs.com/latex/eqneditor.php
 7. To download the Anylogic modeled process - `Click Here </anylogic/DES02/DES02.alp>`_
+

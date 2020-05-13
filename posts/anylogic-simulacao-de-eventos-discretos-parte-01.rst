@@ -1,8 +1,8 @@
-.. title: Anylogic Simulação de Eventos Discretos - Parte 01
+.. title: Anylogic: Simulação de Eventos Discretos - Exemplo Simples - Parte 01
 .. slug: anylogic_simulacao_de_eventos_discretos_01
 .. author: vstram
 .. date: 2020/04/30
-.. categories: pt-BR DES
+.. tags: pt-BR, Simulação de Eventos Discretos
 
 Modelagem de um processo simplificado de manufatura, composto por uma única etapa, através do software Anylogic 8.5.2, utilizando a abordagem **Simulação de Eventos Discretos** (DES - Discrete Event Simulation). O processo consiste apenas uma máquina, processando um fluxo de matérias primas que podem ser acumuladas em uma fila de capacidade limitada.
 

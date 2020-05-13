@@ -1,8 +1,8 @@
-.. title: Anylogic Simulação de Eventos Discretos - Parte 02
+.. title: Anylogic: Simulação de Eventos Discretos - Como Mensurar o Processo - Parte 02
 .. slug: anylogic-simulacao-de-eventos-discretos-parte-02
 .. author: vstram
 .. date: 2020-05-06 17:16:47 UTC-03:00
-.. categories: pt-BR DES
+.. tags: pt-BR, Simulação de Eventos Discretos
 .. has_math: true
 
 Eu havia comentado no artigo anterior - Anylogic **Simulação de Eventos Discretos** - Parte 01 - sobre uma forma de mensurar a performance do processo modelado no Anylogic 8.5.2. Neste artigo, irei mostrar como isso pode ser feito.

@@ -1,4 +1,4 @@
-.. title: Anylogic: Simulação de Eventos Discretos - Análise Paramétrica - Parte 03
+.. title: Anylogic: Simulação de Eventos Discretos - Parâmetros - Parte 03
 .. slug: anylogic-simulacao-de-eventos-discretos-parte-03
 .. author: vstram
 .. date: 2020-05-11 17:14:30 UTC-03:00
@@ -74,7 +74,7 @@ Através dos controles ``slider``, é possível modificar os parâmetros previam
 
 Pode-se criar parâmetros não somente relacionados ao processo em si (capacidade de fornecimento/transporte de matéria prima, capacidade de produção de uma máquina), mas também parâmetros relacionados a custos, por exemplo.
 
-Se para este processo simplificado já é possível fazer várias análises interessantes, imagine para um modelo de uma complexa linha de produção, em que o gestor necessita avaliar o impacto desta modificação e apresentar os resultados destas modificações em uma reunião com diretores. Certamente uma simulação bem feita pode auxiliar no convencimento de uma alteração na linha de produção.
+Se para este processo simplificado já é possível fazer várias análises interessantes, imagine para um modelo de uma complexa linha de produção, em que o gestor necessita avaliar o impacto de uma modificação e apresentar os resultados desta modificação em uma reunião com diretores. Certamente uma simulação bem feita pode auxiliar no convencimento de uma alteração na linha de produção.
 
 E é isso! Nos próximos artigos continuaremos a trazer algumas complexidades para o processo modelado. Até lá!
 

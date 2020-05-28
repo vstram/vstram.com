@@ -1,2 +1,13 @@
 ruamel.yaml
 Nikola
+jupyter
+jupyterlab
+jupyter-dash
+matplotlib
+seaborn
+numpy
+pandas
+xlrd
+scikit-learn
+statsmodels
+plotly==4.8.0

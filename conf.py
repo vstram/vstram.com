@@ -154,11 +154,11 @@ NAVIGATION_LINKS = {
         ('/blog/index.html', 'Blog'),
     ),
     EN: (
-        (f"/{EN}/index.html", "Home"),
-        (f"/{EN}/archive.html", "Archive"),
-        (f"/{EN}/categories/", "Tags"),
-        (f"/{EN}/contact/", "Contact"),
-        (f"/{EN}/blog/index.html", "Blog"),
+        ("/{EN}/index.html".format(EN=EN), "Home"),
+        ("/{EN}/archive.html".format(EN=EN), "Archive"),
+        ("/{EN}/categories/".format(EN=EN), "Tags"),
+        ("/{EN}/contact/".format(EN=EN), "Contact"),
+        ("/{EN}/blog/index.html".format(EN=EN), "Blog"),
     ),
 }
 

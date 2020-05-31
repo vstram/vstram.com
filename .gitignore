@@ -84,6 +84,7 @@ ENV/
 Scripts/
 etc/
 share/
+bin/
 
 # Spyder project settings
 .spyderproject

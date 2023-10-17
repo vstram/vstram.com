@@ -42,7 +42,7 @@ nikola==8.0.4             # via -r requirements.in
 notebook==6.1.5           # via -r requirements.in
 numpy==1.19             # via matplotlib, pandas, scipy, seaborn
 packaging==20.4           # via bleach
-pandas==0.24.2            # via -r requirements.in, seaborn
+pandas==1.2.1            # via -r requirements.in, seaborn
 pandocfilters==1.4.2      # via nbconvert
 parso==0.7.0              # via jedi
 pexpect==4.8.0            # via ipython
